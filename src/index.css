@@ -2,8 +2,22 @@
     margin: 0 auto;
     padding: 0 auto;
     box-sizing: border-box;
-    font-family:'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
     background: black;
+}
+
+.container {
+    margin: 30px auto;
+    color: white;
+    text-align: center;
+}
+
+.heading {
+    font-size: 3em;
+}
+
+.author {
+    font-size: 1.2em;
 }
 
 .btn {
