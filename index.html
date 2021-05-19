@@ -1,25 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Color Generator</title>
-    <link rel="stylesheet" href="src/index.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <div class="heading">
-                Random Color Generator
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <meta name="apple-mobile-web-app-status-bar" content="#aa7700" />
+        <meta name="theme-color" content="black" />
+        <link rel="manifest" href="manifest.json" />
+
+        <title>Random Color Generator</title>
+        <link rel="stylesheet" href="index.css" />
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="heading">Random Color Generator</div>
+                <div class="author">
+                    - Made with <span style="color: #fff">&hearts;</span> by
+                    <a style="color: #fff" href="https:github.com/jainaayush01"
+                        >Aayush Jain</a
+                    >
+                </div>
             </div>
-            <div class="author">
-                - Made with <span style="color: #fff;">&hearts;</span> by <a style="color: #fff" href="https:github.com/jainaayush01">Aayush Jain</a>
-            </div>
-        </div>
-        <button class="btn" onclick="genNewColors();">New Colors</button>
-    </header>
-    <div class="colors-container"></div>
-    <script src="src/index.js"></script>
-</body>
+            <button class="btn" onclick="genNewColors();">New Colors</button>
+        </header>
+        <div class="colors-container"></div>
+        <script src="index.js"></script>
+        <script>
+            window.addEventListener("load", () => {
+                registerSW();
+            });
+
+            // Register the Service Worker
+            async function registerSW() {
+                if ("serviceWorker" in navigator) {
+                    try {
+                        await navigator.serviceWorker.register(
+                            "serviceworker.js"
+                        );
+                    } catch (e) {
+                        console.log("SW registration failed");
+                    }
+                }
+            }
+        </script>
+    </body>
 </html>

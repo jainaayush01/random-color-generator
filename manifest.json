@@ -1,0 +1,22 @@
+{
+    "name": "Random Color Generator PWA",
+    "short_name": "Random Color Generator",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#5900b3",
+    "theme_color": "black",
+    "scope": ".",
+    "description": "Random Color Generator PWA.",
+    "icons": [
+        {
+            "src": "icons/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
