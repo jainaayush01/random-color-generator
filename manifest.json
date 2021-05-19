@@ -1,7 +1,7 @@
 {
     "name": "Random Color Generator PWA",
     "short_name": "Random Color Generator",
-    "start_url": "https://jainaayush01.github.io/Random-Color-Generator/index.html",
+    "start_url": "https://jainaayush01.github.io/Random-Color-Generator",
     "display": "standalone",
     "background_color": "#5900b3",
     "theme_color": "black",
